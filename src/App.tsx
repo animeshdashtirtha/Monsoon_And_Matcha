@@ -16,6 +16,10 @@ function App() {
       <Section className="relative overflow-hidden border-b border-ink/15">
         <GridLines className="opacity-60" />
         <Container className="relative">
+          <div className="mb-20 flex items-center justify-between border-b border-ink/15 pb-5">
+            <TechnicalLabel>Monsoon &amp; Matcha</TechnicalLabel>
+            <TechnicalLabel className="text-botanical">Visual language / 02</TechnicalLabel>
+          </div>
           <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div className="max-w-2xl">
               <SectionLabel>Part 02 / Design system</SectionLabel>
@@ -51,17 +55,19 @@ function App() {
               <SectionLabel>Tokens / 01</SectionLabel>
               <h2 className="mt-5 font-editorial text-3xl tracking-[-0.03em]">A quiet palette</h2>
             </div>
-            <div className="grid grid-cols-2 border-t border-ink/15 sm:grid-cols-4">
+            <div className="grid grid-cols-2 border-t border-ink/15 sm:grid-cols-4 lg:grid-cols-7">
               {[
-                ['Paper', 'bg-paper', '#F9F8F6'],
-                ['Botanical', 'bg-botanical', '#6F785C'],
-                ['Matcha', 'bg-matcha', '#9AA86A'],
-                ['Chili', 'bg-chili', '#9E493C'],
-              ].map(([name, color, value]) => (
+                ['Paper', 'bg-paper'],
+                ['Ink', 'bg-ink'],
+                ['Deep slate', 'bg-deep-slate'],
+                ['Botanical', 'bg-botanical'],
+                ['Matcha', 'bg-matcha'],
+                ['Dark sesame', 'bg-sesame'],
+                ['Chili', 'bg-chili'],
+              ].map(([name, color]) => (
                 <div className="border-b border-r border-ink/15 py-5 pr-4" key={name}>
                   <div className={`mb-4 h-16 ${color}`} />
                   <TechnicalLabel>{name}</TechnicalLabel>
-                  <p className="mt-2 font-technical text-xs text-sesame/60">{value}</p>
                 </div>
               ))}
             </div>
